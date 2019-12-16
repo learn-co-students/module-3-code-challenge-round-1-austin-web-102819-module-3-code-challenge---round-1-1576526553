@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function getImgData() {
     fetch(imageURL)
     .then(response => response.json())
-    .then(data=> {
+    .then(data => {
       imgData = data
       displayImgData(imgData);
       displayImgLikes(imgData)
