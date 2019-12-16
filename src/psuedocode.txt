@@ -1,0 +1,30 @@
+**Get the image data from: https://randopic.herokuapp.com/images/4131 **
+** Pass the image data response into a global variable **
+
+**Show the image data**
+    Display the image by updating the image src in the HTML:
+    <div id="image_card" class="card col-md-4">
+            <img src="" id="image" data-id=""/>
+
+    Display the image name - Edit the HTML that already exists
+    Display the image Likes - Edit the HTML that already exists
+
+    Get the button element and set it equal to a variable (button id="like_button")
+    Add an event listener for "click" to the button variable
+
+**Like Event Listener**
+    Get the likes count from the JSON data and set it equal to a variable (preLike)
+    Create a new variable (likes) and set it equal to preLike + 1
+    Display likes in the browser 
+    Call a function that will update the backend with the new like 
+
+**Update the backend***
+    Create a fetch request with the FULL update.
+    It will be a POST https://devhints.io/js-fetch
+
+**Comment Feature**
+    Find the object on which to trigger a "submit" and set it equal to a variable
+    Find the element with the id: comments and set it equal to a variable
+    Display any comments : iteration
+        Create an li element
+        Set the li.innerText = comment.innerText
