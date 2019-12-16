@@ -22,15 +22,14 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#name').innerText = imageData.name
     document.querySelector('#likes').innerText = imageData.like_count
 
-    comments = imageData.comments
+    let comments = imageData.comments
 
     comments.forEach(comment => {
       document.querySelector('#comments').innerHTML += `
       <li>${comment.content}</li>`
     });
 
-    console.log(imageData.id)
-    likeButton = document.getElementById('like_button')
+    let likeButton = document.getElementById('like_button')
     
     likeButton.addEventListener('click', function() {
      numLikes = parseInt(document.getElementById('likes').innerText)
@@ -58,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault()
       let newComment = document.getElementById('comment_input').value
       document.querySelector('#comments').innerHTML += `
-      <li>${newComment}</li>`
+      <li>${newComment}</li><button>x</button>`
 
       let data = {
         image_id: imageData.id,
